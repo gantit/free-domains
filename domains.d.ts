@@ -7,22 +7,22 @@ interface IRecord {
    * often carries machine-readable data, such as specified by RFC 1464, opportunistic encryption, Sender Policy
    * Framework, DKIM, DMARC, DNS-SD, etc.
    */
-  TXT?: string[]
+  TXT?: string[];
 
   /**
    * Returns a 32-bit IPv4 address, most commonly used to map hostnames to an IP address of the host, but it is also
    * used for DNSBLs, storing subnet masks in RFC 1101, etc.
    */
-  A?: string[]
+  A?: string[];
 
   /** Returns a 128-bit IPv6 address, most commonly used to map hostnames to an IP address of the host. */
-  AAAA?: string[]
+  AAAA?: string[];
 
   /** Alias of one name to another: the DNS lookup will continue by retrying the lookup with the new name. */
-  CNAME?: string
+  CNAME?: string;
 
   /** Delegates a DNS zone to use the given authoritative name servers. */
-  NS?: string[]
+  NS?: string[];
 }
 
 /**
@@ -30,38 +30,38 @@ interface IRecord {
  */
 interface ISubDomain {
   /** Describe your project in this field. */
-  description: string
+  description: string;
 
   /** Select the required root domain. */
-  domain: '1bt.uk' | 'is-an.app'
+  domain: "is-a.tech";
 
   /** The subdomain you want to use (e.g.: "foo" means "foo.example.com"). */
-  subdomain: string
+  subdomain: string;
 
   /** Subdomain owner information. */
   owner?: {
     /** URL to the repository where project source code is located. */
-    repo?: string
+    repo?: string;
 
     /** Email address (for example, for sending notifications in future). */
-    email?: string
-  }
+    email?: string;
+  };
 
   /** DNS record configuration. */
-  record: IRecord
+  record: IRecord;
 
   /** Enable Cloudflare proxy for this subdomain or not. */
-  proxy?: boolean
+  proxy?: boolean;
 
   /** Nested subdomains configuration. */
   nested?: {
     /** The nested subdomain name (e.g.: "bar" means "bar.foo.example.com"). */
-    subdomain: string
+    subdomain: string;
 
     /** Nested subdomain DNS record configuration. */
-    record: IRecord
+    record: IRecord;
 
     /** Enable Cloudflare proxy for this subdomain or not. */
-    proxy?: boolean
-  }[]
+    proxy?: boolean;
+  }[];
 }
