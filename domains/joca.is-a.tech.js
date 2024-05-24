@@ -1,5 +1,5 @@
 addSubDomain({
-  description: "College project",
+  description: "Joca's personal website",
   domain: "is-a.tech",
   subdomain: "joca",
   owner: {
@@ -7,7 +7,7 @@ addSubDomain({
     email: "me@joca.dev",
   },
   record: {
-    CNAME: "joca.dev",
+    CNAME: "cname.vercel-dns.com.",
   },
   proxy: false,
 });

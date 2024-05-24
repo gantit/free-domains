@@ -7,4 +7,4 @@ updates:
     directory: /
     groups: {github-actions: {patterns: ['*']}}
     schedule: {interval: monthly}
-    assignees: [tarampampam]
+    assignees: [gantit]

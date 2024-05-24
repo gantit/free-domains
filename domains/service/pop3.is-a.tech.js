@@ -1,12 +1,11 @@
 addSubDomain({
-  description: "Root domain",
+  description: "pop3 record",
   domain: "is-a.tech",
-  subdomain: "@",
+  subdomain: "pop3",
   owner: {
     repo: "https://github.com/gantit/free-domains",
   },
   record: {
-    A: ["76.76.21.21"],
+    CNAME: "mailsrv2.dondominio.com",
   },
-  proxy: false,
 });

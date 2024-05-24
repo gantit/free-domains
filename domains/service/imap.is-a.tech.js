@@ -1,12 +1,11 @@
 addSubDomain({
-  description: "Root domain",
+  description: "imap record",
   domain: "is-a.tech",
-  subdomain: "@",
+  subdomain: "imap",
   owner: {
     repo: "https://github.com/gantit/free-domains",
   },
   record: {
-    A: ["76.76.21.21"],
+    CNAME: "mailsrv2.dondominio.com",
   },
-  proxy: false,
 });
